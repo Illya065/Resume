@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+li[class],
+ol[class] {
+  padding: 0px;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: grey;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.info {
+  font-family: 'Montserrat';
+  background-color: #004078;
+  color: #fff;
+  width: 300px;
+}
+
+.ava {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 250px;
+}
+
+.ava img {
+  width: 215px;
+  height: 200px;
+  border-radius: 25px;
+}
+
+.contacts__list {
+  padding: 15px 25px;
+  line-height: 2rem;
+}
+
+.contacts__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__list li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.contacts__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.languages__list {
+  display: block;
+  padding: 25px 25px;
+}
+
+.languages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+.languages__item:last-child {
+  margin-bottom: 0;
+}
+
+.languages__name {
+  font-size: 18px;
+}
+
+.languages__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.languages__level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.languages__level div {
+  margin-left: 5px;
+}
+
+.languages__custom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0074a2;
+}
+
+.languages__grade {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.skills__list {
+  padding: 15px 40px;
+  line-height: 1.8rem;
+}
+
+.skills__list li {
+  list-style: disc;
+}
+
+.section__header {
+  font-family: 'Montserrat';
+  font-size: 22px;
+  background-color: #00315e;
+  padding: 5px 0px 5px 25px;
+  font-weight: 700;
+}
+
+.done {
+  background-color: #fff;
+}
+
+.about {
+  width: 700px;
+  font-family: 'Montserrat';
+}
+
+.about__content {
+  padding: 35px 35px 35px;
+}
+
+.name__full {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.name__prof {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.name__addition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.projects {
+  margin-bottom: 40px;
+}
+
+.projects__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects__name {
+  font-weight: 700;
+}
+
+.projects__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+}
+
+.projects__link a {
+  color: #004078;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.projects__about {
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.block__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.block__header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #004078;
+  margin-right: 15px;
+}
+
+.block__header__line {
+  height: 3px;
+  background-color: #004078;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  display: inline-block;
+}
+
+.block__header__img {
+  width: 100px;
+  height: 50px;
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.block__header__img img {
+  width: 50px;
+  height: 50px;
+}
+
+.education {
+  margin-bottom: 40px;
+}
+
+.education__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.education__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+}
+
+.education__name {
+  margin-bottom: 10px;
+}
+
+.education__about {
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.biography__text {
+  text-align: center;
+}
