@@ -350,39 +350,6 @@ body {
    }
 }
 
-.education {
-   margin-bottom: 40px;
-
-   &__body {
-   }
-
-   &__item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
-
-   &__year {
-   }
-
-   &__link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 400px;
-   }
-
-   &__name {
-      
-      margin-bottom: 10px;
-   }
-
-   &__about {
-      text-align: center;
-      font-weight: 300;
-      font-size: 14px;
-   }
-}
 
 .biography {
 
